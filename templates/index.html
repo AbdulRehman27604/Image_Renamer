@@ -104,6 +104,22 @@
                 <pre>{{ output }}</pre>
             </div>
         {% endif %}
+	
+	{% if output %}
+    <div class="output">
+        <strong>Output:</strong>
+        <pre>{{ output }}</pre>
+    </div>
+{% endif %}
+
+{% if zip_path %}
+    <p style="margin-top:15px;">
+        <a href="{{ url_for('download') }}" style="text-decoration:none; color:#007BFF; font-weight:bold;">
+            Download Renamed Images
+        </a>
+    </p>
+{% endif %}
+
     </div>
 </body>
 </html>
